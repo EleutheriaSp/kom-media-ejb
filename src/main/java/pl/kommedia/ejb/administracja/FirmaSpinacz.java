@@ -9,8 +9,9 @@ import pl.kompro.model.kartoteki.Firma;
 public class FirmaSpinacz extends Vector<Firma> implements OdwiedzajacyFirmeApp<Firma>{
 	private static final long serialVersionUID = -6593091443043273870L;
 
-	@Override public Firma odwiedz( FirmaApp firma){
+	@Override public Firma odwiedz( final FirmaApp firma){
 		return new Firma(){
+			private static final long serialVersionUID = -5591045156061183362L;
 			private String kod;
 			private String nazwa;
 			{
