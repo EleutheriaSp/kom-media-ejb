@@ -1,5 +1,7 @@
 package pl.kommedia.ejb.administracja;
 
+import java.util.List;
+
 import javax.annotation.PostConstruct;
 import javax.ejb.Remote;
 import javax.ejb.Singleton;
@@ -8,6 +10,7 @@ import javax.inject.Inject;
 
 import pl.kommedia.dao.administracja.FirmyDao;
 import pl.kommedia.jpa.administracja.FirmaApp;
+import pl.kompro.model.kartoteki.Firma;
 
 @Singleton
 @Startup
@@ -24,11 +27,11 @@ public class Konfiguracja implements Konf{
     	//}
     }
 	
-	public String getWykazFirm(){
+	public List<Firma> getWykazFirm(){
     	FirmaSpinacz fs= new FirmaSpinacz();
     	for( FirmaApp firma: firmy.odbWykazFirm())
     		fs.add( firma.akceptuj( fs));
-		return "Dupa x12";	
+		return fs;	
 	}
 	
 }

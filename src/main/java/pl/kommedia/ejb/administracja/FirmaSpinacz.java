@@ -12,8 +12,8 @@ public class FirmaSpinacz extends Vector<Firma> implements OdwiedzajacyFirmeApp<
 	@Override public Firma odwiedz( final FirmaApp firma){
 		return new Firma(){
 			private static final long serialVersionUID = -5591045156061183362L;
-			private String kod;
-			private String nazwa;
+			private String kod;//= "kod";
+			private String nazwa;//= "nazwa";
 			{
 				kod= firma.odbKod();
 				nazwa= firma.odbNazwe();
