@@ -4,7 +4,10 @@
 	<persistence-unit name="kom-media-ejb" transaction-type="JTA">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<jta-data-source>java:jboss/datasources/KomMedia</jta-data-source>
+		
 		<class>pl.kommedia.jpa.administracja.FirmaApp</class>
+		<class>pl.kommedia.sprzedaz.jpa.FakturaBil</class>
+		<class>pl.kommedia.sprzedaz.jpa.FakturaPodstawowaBil</class>
 		
 		<properties>
 			<property name="eclipselink.target-server" value="JBoss"/>
