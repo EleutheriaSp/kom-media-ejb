@@ -11,6 +11,8 @@ public class FakturySpinacz extends Vector<Faktura> implements OdwiedzajacyFaktu
 
 	@Override public Faktura odwiedz( final FakturaPodstawowaBil faktura){
 		return new Faktura(){
+			private static final long serialVersionUID = 1245077919861283613L;
+
 			private String numer;
 			{
 				numer= faktura.odbNumer();

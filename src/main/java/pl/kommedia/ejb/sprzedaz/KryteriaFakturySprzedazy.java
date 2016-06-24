@@ -23,6 +23,11 @@ public class KryteriaFakturySprzedazy implements KryteriaFaktury{
 	//@EJB
 	//private Faktury faktury;
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4644795309130391658L;
+
 	@Inject
 	private FirmyDao firmy;
 	

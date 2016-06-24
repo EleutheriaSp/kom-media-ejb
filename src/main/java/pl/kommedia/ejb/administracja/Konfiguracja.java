@@ -16,9 +16,9 @@ import pl.kommedia.jpa.administracja.FirmaApp;
 import pl.kommedia.sprzedaz.dao.FakturyBil;
 import pl.kompro.model.kartoteki.Firma;
 
-@Singleton
-@Startup
-//@Stateful
+//@Singleton
+//@Startup
+@Stateful
 @Remote( Konf.class)
 public class Konfiguracja implements Konf, Serializable{
 	/**

@@ -18,16 +18,16 @@ public class FirmaSpinacz extends Vector<Firma> implements OdwiedzajacyFirmeApp<
 			private String kod;
 			private String nazwa;
 			{
-				kod= "kod"; //firma.odbKod();
-				nazwa= "nazwa"; //firma.odbNazwe();
+				kod= firma.odbKod();
+				nazwa= firma.odbNazwe();
 			}
 			
 			@Override public String getKod(){
-				return kod+ " <test><2>";
+				return kod;
 			}
 
 			@Override public String getNazwa(){
-				return nazwa+ " <test><2>";
+				return nazwa;
 			}
 		};
 	}
