@@ -18,14 +18,6 @@ import pl.kompro.model.handel.Faktury.KryteriaFaktury;
 @Stateful
 @Remote( KryteriaFaktury.class)
 public class KryteriaFakturySprzedazy implements KryteriaFaktury{
-
-
-	//@EJB
-	//private Faktury faktury;
-	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -4644795309130391658L;
 
 	@Inject
