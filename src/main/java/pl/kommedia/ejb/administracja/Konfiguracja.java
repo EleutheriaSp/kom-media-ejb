@@ -12,8 +12,8 @@ import javax.ejb.Stateful;
 import javax.inject.Inject;
 
 import pl.kommedia.dao.administracja.FirmyDao;
+import pl.kommedia.dao.sprzedaz.FakturyBil;
 import pl.kommedia.jpa.administracja.FirmaApp;
-import pl.kommedia.sprzedaz.dao.FakturyBil;
 import pl.kompro.model.kartoteki.Firma;
 
 //@Singleton

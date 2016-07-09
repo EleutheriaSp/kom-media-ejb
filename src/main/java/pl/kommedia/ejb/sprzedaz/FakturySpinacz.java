@@ -2,8 +2,8 @@ package pl.kommedia.ejb.sprzedaz;
 
 import java.util.Vector;
 
-import pl.kommedia.sprzedaz.dao.OdwiedzajacyFaktureBil;
-import pl.kommedia.sprzedaz.jpa.FakturaPodstawowaBil;
+import pl.kommedia.dao.sprzedaz.OdwiedzajacyFaktureBil;
+import pl.kommedia.jpa.sprzedaz.FakturaPodstawowaBil;
 import pl.kompro.model.handel.Faktura;
 
 public class FakturySpinacz extends Vector<Faktura> implements OdwiedzajacyFaktureBil<Faktura>{
@@ -12,14 +12,16 @@ public class FakturySpinacz extends Vector<Faktura> implements OdwiedzajacyFaktu
 	@Override public Faktura odwiedz( final FakturaPodstawowaBil faktura){
 		return new Faktura(){
 			private static final long serialVersionUID = 1245077919861283613L;
-
-			private String numer;
-			{
-				numer= faktura.odbNumer();
-			}
+			
+			private long id= faktura.odbId();
+			private String numer=  faktura.odbNumer();
 			
 			@Override public String getNumer(){
 				return numer;
+			}
+
+			@Override public long getId(){
+				return id;
 			}
 			
 		};

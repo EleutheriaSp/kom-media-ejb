@@ -6,7 +6,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import pl.kommedia.dao.administracja.FirmyDao;
-import pl.kommedia.sprzedaz.dao.FakturyBil;
+import pl.kommedia.dao.rozrachunki.RozrachunkiPro;
+import pl.kommedia.dao.sprzedaz.FakturyBil;
 
 @ApplicationScoped
 public class Zasoby {
@@ -23,5 +24,9 @@ public class Zasoby {
 	@Produces
 	private FakturyBil daoFaktury(){
 		return new FakturyBil( em);
+	}
+	
+	@Produces private RozrachunkiPro daoRozrachunki(){
+		return RozrachunkiPro.utwRozrachunki( em);
 	}
 }
